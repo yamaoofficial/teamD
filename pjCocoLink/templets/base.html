@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}CocoLink{% endblock %}</title>
+    <style>
+        body {
+            font-family: "Yu Gothic", "メイリオ", sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 外枠（白い中央エリア） */
+        .container {
+            background-color: #fff;
+            width: 80%;
+            min-height: 500px;
+            margin: 60px auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            position: relative;
+        }
+
+        /* ① CocoLink（ヘッダー） */
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* ② ページ名 */
+        .page-name {
+            font-size: 22px;
+            margin: 20px 0 40px 0;
+        }
+
+        /* ③ 戻るボタン */
+        .back-btn {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            background-color: #fff;
+            border: 2px solid #888;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 56px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .back-btn:hover {
+            background-color: #eaeaea;
+        }
+
+        /* 中央コンテンツ */
+        .content {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-btn">←</a>
+        <div class="title">① CocoLink</div>
+        <div class="page-name">② {% block page_name %}ページ名{% endblock %}</div>
+        <div class="content">
+            {% block content %}
+            <!-- 各ページ内容 -->
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
