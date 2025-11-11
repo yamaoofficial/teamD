@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* 共通ヘッダー */
+.header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 戻るボタン */
+.back-btn {
+    position: absolute;
+    left: 150px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #888;
+    background: none;
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CocoLinkとページ名を中央配置 */
+.header-text {
+    text-align: center;
+}
+
+.system-title {
+    font-size: 20px;
+    margin: 0;
+}
+
+.page-title {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* ページ本体 */
+.content {
+    padding: 40px;
+    text-align: center;
+}
+
+/* ===== ポップアップ部分 ===== */
+.popup-overlay {
+    display: none; /* 初期は非表示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-window {
+    background-color: #fff;
+    width: 500px;
+    padding: 60px 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.popup-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.popup-open-btn,
+.popup-close-btn {
+    border: 1px solid #888;
+    background: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.popup-open-btn:hover,
+.popup-close-btn:hover {
+    background-color: #f2f2f2;
+}

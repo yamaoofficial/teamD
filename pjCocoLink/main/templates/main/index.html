@@ -1,47 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>CocoLink - メインページ</title>
-    <style>
-        body {
-            font-family: "Segoe UI", sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #3b82f6;
-            color: white;
-            padding: 10px 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        main {
-            margin: 40px;
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        button {
-            padding: 8px 16px;
-            border: none;
-            background: #3b82f6;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #2563eb;
-        }
-    </style>
-</head>
-<body>
-    <header>① CocoLink</header>
-    <main>
-        <h1>② ページ名</h1>
-        <button>③ 一覧</button>
-    </main>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}トップページ | CocoLink{% endblock %}
+{% block page_title %}トップページ{% endblock %}
+
+{% block content %}
+    <p>ここにページ固有の内容が入ります。</p>
+
+    <!-- ✅ ポップアップを開くボタン -->
+    <button class="popup-open-btn" onclick="openPopup()">ポップアップ表示</button>
+{% endblock %}
