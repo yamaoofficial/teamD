@@ -15,3 +15,5 @@ __pycache__/
 # --- Bootstrapなど外部ライブラリ ---
 static/css/styles*.css
 static/js/scripts*.js
+
+.env
