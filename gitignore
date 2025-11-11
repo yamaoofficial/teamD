@@ -1,5 +1,6 @@
 # 仮想環境を除外
 venv/
+pip/
 
 # Pythonキャッシュを除外
 __pycache__/
