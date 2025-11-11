@@ -16,4 +16,5 @@ __pycache__/
 static/css/styles*.css
 static/js/scripts*.js
 
+# Environment settings
 .env
